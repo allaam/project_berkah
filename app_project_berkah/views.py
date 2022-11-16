@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from datetime import date
-from app_project_berkah.models import ListBarang
 
 # Create your views here.
 
@@ -45,8 +44,4 @@ def transaksi_penjualan(request):
 
 
 def input_barang(request):
-    listBarang = ListBarang.objects.all()
-    konteks = {
-        'listBarang': listBarang,
-    }
-    return render(request, 'input_barang.html', konteks)
+    return render(request, 'input_barang.html')
